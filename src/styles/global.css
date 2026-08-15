@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply text-text-primary text-body;
+    background: linear-gradient(180deg, #FBEEE8 0%, #F8E0D2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  h1 { @apply text-h1 tracking-tight leading-[1.0]; }
+  h2 { @apply text-h2 tracking-tight leading-[1.05]; }
+  h3 { @apply text-h3 tracking-tight leading-[1.1]; }
+  .text-display { @apply tracking-tight leading-[0.95]; }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .bg-blush {
+    background-color: #FBEEE8;
+  }
+  .bg-mint {
+    background-color: #DCEAE0;
+  }
+  .bg-sage {
+    background-color: #CFE0CE;
+  }
+  .bg-rose-pastel {
+    background-color: #F4D8D5;
+  }
+  .bg-peach-pastel {
+    background-color: #F8E0D2;
+  }
+  .bg-cream {
+    background-color: #FAF5F0;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply mx-auto w-full max-w-[1280px] px-4 tablet:px-6 desktop:px-8;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .scrollbar-hide,
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar,
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Ocultar barra de scroll horizontal globalmente sin deshabilitar la funcionalidad de deslizar/scroll */
+[class*="overflow-x-"],
+.no-scrollbar,
+.scrollbar-none,
+.scrollbar-hide {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+[class*="overflow-x-"]::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}

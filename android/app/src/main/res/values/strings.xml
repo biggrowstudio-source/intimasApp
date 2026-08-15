@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Intimas By Lorena</string>
+    <string name="title_activity_main">Intimas By Lorena</string>
+    <string name="package_name">com.intimasbylorena.app</string>
+    <string name="custom_url_scheme">com.intimasbylorena.app</string>
+</resources>
