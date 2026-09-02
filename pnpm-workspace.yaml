@@ -2,7 +2,8 @@ packages:
   - '.'
 
 allowBuilds:
-  sharp: set this to true or false
+  sharp: false
+  vue-demi: false
 
 onlyBuiltDependencies:
   - sharp
